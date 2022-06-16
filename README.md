@@ -16,7 +16,7 @@ For demonstrative purposes.
 
 3 - Ensure compatibility on different browsers and devices.
 
-## **`⚙️ Technical approach`**
+## **`👨🏻‍💻 Technical approach`**
 
 -   `GulpJS` `Twig` `Sass` `ES6`
 -   External : `SwiperJS`
