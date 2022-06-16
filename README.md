@@ -6,7 +6,7 @@ For demonstrative purposes.
 
 **Ownr** is an estate agency specialising in rare and premium properties. This web application allows the user to search for the house of their dreams through a large selection of properties and numerous customer reviews.
 
-![Mockup](assets/img/doc/mockup.png)
+![Mockup](assets/doc/mockup.png)
 
 ## **`🚀 Challenge`**
 
@@ -31,8 +31,12 @@ Pieces of the cake :
 <ul class="list is-socials flex">
     {% for item in social_items %}
         <li class="list_item">
-            <a href="{{ item.path ? item.path : "" }}" title="{{ item.label }}" target="_blank">
-                <span class="icon{{ item.icon ? " icon_" ~ item.icon : "" }}"></span>
+            <a href="{{ item.path ? item.path : '' }}"
+                title="{{ item.label }}"
+                target="_blank">
+                <span class="icon{{ item.icon ? ' icon_' ~ item.icon : '' }}">
+
+                </span>
             </a>
         </li>
     {% endfor %}
