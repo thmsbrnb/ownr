@@ -2,7 +2,7 @@
 
 For demonstrative purposes.
 
-## **`🔋 What is Ownr ?`**
+## **`🏠 What is Ownr ?`**
 
 **Ownr** is an estate agency specialising in rare and premium properties. This web application allows the user to search for the house of their dreams through a large selection of properties and numerous customer reviews.
 
