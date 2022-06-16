@@ -25,7 +25,7 @@ For demonstrative purposes.
 -   SEO friendly.
 -   Browsers compatible.
 
-Pieces of the cake :
+## **`🍰 Pieces of the cake`**
 
 ```twig
 <ul class="list is-socials flex">
