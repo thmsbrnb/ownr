@@ -1,0 +1,193 @@
+.nav {
+    visibility: hidden;
+    position: absolute;
+    top: $headerHeightMobile;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(#1c1c1c, 0);
+    @include transition(all, $time2);
+
+    &.is-active {
+        visibility: visible;
+        background: rgba(#1c1c1c, 0.75);
+
+        .nav_container {
+            transform: translateX(-100%);
+        }
+    }
+
+    .nav_container {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        @include transition(transform, $time2);
+    }
+
+    .list {
+        &.is-nav,
+        &.is-socials {
+            margin-top: $headerHeightMobile;
+
+            .list_item {
+                color: $white;
+            }
+        }
+
+        &.is-nav {
+            $spacing: 4.8rem;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: $spacing;
+            width: 100%;
+
+            .list_item {
+                font-size: 2.4rem;
+                @include font-regular;
+                @include transition(color, $time2);
+
+                &:hover {
+                    color: $primary;
+                }
+
+                &.is-active {
+                    color: $primary;
+                }
+            }
+        }
+
+        &.is-socials {
+            margin: 4.8rem auto 0;
+            padding-top: 4.8rem;
+            column-gap: 3.2rem;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+            border-top: 0.1rem solid rgba($white, 0.3);
+
+            .icon_facebook,
+            .icon_instagram,
+            .icon_linkedin,
+            .icon_youtube {
+                &:before {
+                    width: 2.4rem;
+                }
+            }
+
+            .icon_facebook {
+                &:before {
+                    background: url("../../../assets/icons/icon_facebook.svg")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .icon_instagram {
+                &:before {
+                    background: url("../../../assets/icons/icon_instagram.svg")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .icon_linkedin {
+                &:before {
+                    background: url("../../../assets/icons/icon_linkedin.svg")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .icon_youtube {
+                &:before {
+                    background: url("../../../assets/icons/icon_youtube.svg")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// < 360px
+@include smallMobile {
+    .nav {
+        .list {
+            &.is-nav {
+                margin-top: math.div($headerHeightMobile, 2);
+            }
+        }
+    }
+}
+
+// > 720px
+@include largeTablet {
+    .nav {
+        visibility: visible;
+        margin-right: auto;
+        position: relative;
+        top: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+
+        &.is-active {
+            background: inherit;
+
+            .nav_container {
+                transform: none;
+            }
+        }
+
+        .nav_container {
+            position: relative;
+            top: unset;
+            left: unset;
+            width: auto;
+            height: auto;
+            background: transparent;
+        }
+
+        .list {
+            &.is-nav {
+                $spacing: 3.2rem;
+
+                margin-top: 0;
+                margin-left: $spacing;
+                flex-direction: row;
+                justify-content: flex-start;
+                column-gap: $spacing;
+
+                .list_item {
+                    font-size: 1.4rem;
+                    color: $black;
+                    @include font-regular;
+                }
+            }
+
+            &.is-socials {
+                display: none;
+            }
+        }
+    }
+}
+
+// > 960px
+@include smallDesktop {
+    .nav {
+        .list {
+            &.is-nav {
+                $spacing: 6rem;
+
+                margin-left: $spacing;
+                column-gap: $spacing;
+            }
+        }
+    }
+}

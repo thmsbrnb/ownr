@@ -1,0 +1,180 @@
+.section {
+    &.is-locations {
+        padding: 10rem 0 4rem;
+        min-height: auto;
+
+        .section_container {
+            height: auto;
+            text-align: center;
+        }
+
+        .section_content {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 3.2rem;
+        }
+
+        .location,
+        .location_img {
+            border-radius: $radius;
+        }
+
+        .location {
+            cursor: pointer;
+            padding-bottom: 2.4rem;
+            overflow: hidden;
+        }
+
+        .location_img {
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            max-width: 44rem;
+
+            img {
+                width: 100%;
+                height: 22rem;
+                opacity: 0.98;
+                object-fit: cover;
+            }
+
+            &:before {
+                $size: 2.4rem;
+
+                content: "";
+                position: absolute;
+                z-index: 1;
+                top: 2.4rem;
+                right: 2.4rem;
+                width: $size;
+                height: $size;
+                background: url("../../../assets/icons/icon_like.svg") no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .location_value,
+        .location_data {
+            padding: 0 0.8rem;
+        }
+
+        .location_value,
+        .location_data {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .location_value {
+            margin: 2.4rem 0 1.6rem;
+
+            font-size: 2rem;
+            @include font-medium;
+        }
+
+        .location_data {
+            font-size: 1.4rem;
+            @include font-semi-bold;
+
+            &--catalog {
+                margin-bottom: 0.6rem;
+            }
+
+            .light {
+                @include font-regular;
+            }
+        }
+
+        .icon {
+            &:before {
+                margin-right: 0.6rem;
+            }
+        }
+
+        .icon_location_2 {
+            &:before {
+                background: url("../../../assets/icons/icon_location_2.svg")
+                    no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .icon_rank {
+            &:before {
+                width: 1.6rem;
+                height: 1.6rem;
+                background: url("../../../assets/icons/icon_rank.svg") no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .btn {
+            margin-top: 3.2rem;
+            width: 100%;
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// > 560px
+@include smallTablet {
+    .section {
+        &.is-locations {
+            .location_img {
+                img {
+                    height: 34rem;
+                }
+            }
+        }
+    }
+}
+
+// > 720px
+@include largeTablet {
+    .section {
+        &.is-locations {
+            padding: 10rem 0 8rem;
+
+            .section_content {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+            }
+
+            .location {
+                @include transition(transform, $time2);
+
+                &:hover {
+                    transform: scale(1.075);
+                }
+            }
+
+            .location_value {
+                font-size: 1.6rem;
+            }
+
+            .location_img {
+                img {
+                    aspect-ratio: 8 / 9;
+                    height: auto;
+                    @include transition(transform, $time1);
+                }
+            }
+
+            .btn {
+                width: max-content;
+            }
+        }
+    }
+}
+
+// > 960px
+@include smallDesktop {
+    .section {
+        &.is-locations {
+            .section_content {
+                padding: 0 12rem;
+                gap: 4rem;
+            }
+        }
+    }
+}

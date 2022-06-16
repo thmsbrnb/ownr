@@ -1,0 +1,125 @@
+{% set section = {
+    "value": "popular",
+    "behaviour": "container"
+} %}
+
+{% set data_items = [
+    {
+        "img": "../../assets/img/popular_1.png",
+        "title": "Atypical Flat",
+        "price": "$393.000",
+        "data": [
+            {
+                "icon": "icon_location_3",
+                "label": "Lakewood, CA"
+            },
+            {
+                "icon": "icon_sqft",
+                "label": "219 SQFT"
+            },
+            {
+                "icon": "icon_car",
+                "label": "Parking" 
+            },
+            {
+                "icon": "icon_people",
+                "label": "2 bedrooms" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular_2.png",
+        "title": "Modern House",
+        "price": "$1.115.000",
+        "data": [
+            {
+                "icon": "icon_location_3",
+                "label": "Naples, CA"
+            },
+            {
+                "icon": "icon_sqft",
+                "label": "475 SQFT"
+            },
+            {
+                "icon": "icon_car",
+                "label": "Parking" 
+            },
+            {
+                "icon": "icon_people",
+                "label": "3 bedrooms" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular_3.png",
+        "title": "Ancient House",
+        "price": "$1.322.500",
+        "data": [
+            {
+                "icon": "icon_location_3",
+                "label": "Naples, CA"
+            },
+            {
+                "icon": "icon_sqft",
+                "label": "512 SQFT"
+            },
+            {
+                "icon": "icon_car",
+                "label": "Parking" 
+            },
+            {
+                "icon": "icon_people",
+                "label": "4 bedrooms" 
+            }
+        ]
+    },
+    {
+        "img": "../../assets/img/popular_4.png",
+        "title": "Minimalist Apartment",
+        "price": "$975.500",
+        "data": [
+            {
+                "icon": "icon_location_3",
+                "label": "El Segundo, CA"
+            },
+            {
+                "icon": "icon_sqft",
+                "label": "402 SQFT"
+            },
+            {
+                "icon": "icon_car",
+                "label": "Parking" 
+            },
+            {
+                "icon": "icon_people",
+                "label": "3 bedrooms" 
+            }
+        ]
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}{{ section.behaviour ? " " ~ section.behaviour : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container">
+        <h2 class="section_title">Popular<br>properties deals ⭐️</h2>
+        <div class="swiper container">
+            <div class="swiper-wrapper flex">
+                {% for item in data_items %}
+                    <article class="card swiper-slide">
+                        <img src="{{ item.img }}" alt="Popular property" class="card_img">
+                        <div class="card_price">{{ item.price }}</div>
+                        <div class="card_title">{{ item.title }}</div>
+                        <div class="card_data">
+                            {% for data in item.data %}
+                                <div class="card_dataGroup">
+                                    <span class="icon{{ data.icon ? " " ~ data.icon : "" }}"></span>
+                                    {{ data.label }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>

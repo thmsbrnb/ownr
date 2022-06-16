@@ -1,0 +1,53 @@
+{% set section = {
+    "value": "locations",
+    "behaviour": "container"
+} %}
+
+{% set location_items = [
+    {
+        "img": "../../assets/img/loc_1.png",
+        "location": "Montebello, CA",
+        "catalog": "14+<span class='light'>&nbsp;Properties</span>",
+        "rank" : "4,4<span class='light'>&nbsp;(1,214 reviews)</span>"
+    },
+    {
+        "img": "../../assets/img/loc_2.png",
+        "location": "Naples, CA",
+        "catalog": "9+<span class='light'>&nbsp;Properties</span>",
+        "rank" : "4,8<span class='light'>&nbsp;(1,455 reviews)</span>"
+    },
+    {
+        "img": "../../assets/img/loc_3.png",
+        "location": "Los Angeles, CA",
+        "catalog": "21+<span class='light'>&nbsp;Properties</span>",
+        "rank" : "4,5<span class='light'>&nbsp;(787 reviews)</span>"
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container{{ section.behaviour ? " " ~ section.behaviour : "" }}">
+        <h2 class="section_title">most searched<br>locations</h2>
+        <h3 class="section_subtitle">Discover the most popular places,<br>based on our users' research and their best reviews</h3>
+        <div class="section_content grid">
+            {% for item in location_items %}
+                <article class="location">
+                    <div class="location_img">
+                        <img src="{{ item.img ? item.img : "" }}" alt="{{ item.location }}">
+                    </div>
+                    <div class="location_value">
+                        <span class="icon icon_location_2"></span>
+                        {{ item.location }}
+                    </div>
+                    <div class="location_data location_data--catalog">
+                        {{ item.catalog }}
+                    </div>
+                    <div class="location_data location_data--rank">
+                        <span class="icon icon_rank"></span>
+                        {{ item.rank }}
+                    </div>
+                </article>   
+            {% endfor %}
+        </div>
+        <button class="btn btn--secondary">view all</button>
+    </div>
+</section>

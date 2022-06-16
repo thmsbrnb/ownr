@@ -1,0 +1,62 @@
+{% set nav_items = [
+    {
+        "label": "Products",
+        "path": "locations"
+    },
+    {
+        "label": "Services",
+        "path": "services"
+    },
+    {
+        "label": "About Us",
+        "path": "#!"
+    },
+    {
+        "label": "News",
+        "path": "newsletter"
+    }
+] %}
+
+{% set social_items = [
+    {
+        "label": "Facebook",
+        "path": "http://www.facebook.com",
+        "icon": "facebook"
+    },
+    {
+        "label": "Instagram",
+        "path": "http://www.instagram.com",
+        "icon": "instagram"
+    },
+    {
+        "label": "LinkedIn",
+        "path": "http://www.linkedin.com",
+        "icon": "linkedin"
+    },
+    {
+        "label": "YouTube",
+        "path": "http://www.youtube.com",
+        "icon": "youtube"
+    }
+] %}
+
+<nav class="nav" aria-label="main">
+    <div class="nav_container">
+        <ul class="list is-nav flex">
+            {% for item in nav_items %}
+                <li class="list_item nav_trigger">
+                    <a href="{{ item.path ? "#" ~ item.path : "" }}" title="{{ item.label }}">{{ item.label }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="list is-socials flex">
+            {% for item in social_items %}
+                <li class="list_item">
+                    <a href="{{ item.path ? item.path : "" }}" title="{{ item.label }}" target="_blank">
+                        <span class="icon{{ item.icon ? " icon_" ~ item.icon : "" }}"></span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,129 @@
+.form {
+    user-select: none;
+
+    &.is-active {
+        .form_options {
+            display: block;
+        }
+
+        .form_select {
+            .icon_arrow_down {
+                &:before {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .form_container {
+        position: relative;
+    }
+
+    .form_label {
+        padding: 1.6rem 0 0.8rem;
+        font-size: 1.4rem;
+        @include font-light;
+    }
+
+    .form_select {
+        border-bottom: 0.1rem solid rgba(#000, 0.075);
+
+        .icon_location,
+        .icon_house_2,
+        .icon_budget {
+            &:before {
+                margin-right: 0.8rem;
+            }
+        }
+
+        .icon_location {
+            &:before {
+                background: url("../../../assets/icons/icon_location.svg")
+                    no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .icon_house_2 {
+            &:before {
+                background: url("../../../assets/icons/icon_house_2.svg")
+                    no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .icon_budget {
+            &:before {
+                background: url("../../../assets/icons/icon_budget.svg")
+                    no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .icon_arrow_down {
+            &:before {
+                width: 1.6rem;
+                background: url("../../../assets/icons/icon_arrow_down.svg")
+                    no-repeat;
+                background-size: cover;
+                @include transition(transform, 0.4s);
+            }
+        }
+    }
+
+    .form_options {
+        z-index: 99;
+        padding: 0 2.4rem;
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.6rem);
+        width: 100%;
+        border-radius: $radius;
+        border: 0.1rem solid $grey;
+        box-shadow: 0.2rem 0.6rem 0.6rem 0 rgba($black, 0.075);
+        background: $white;
+    }
+
+    .form_value {
+        cursor: pointer;
+        padding: 2.4rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include font-medium;
+
+        &:not(:first-child) {
+            border-top: 0.1rem solid darken($grey, 2);
+        }
+
+        .flex {
+            align-items: center;
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// > 960px
+@include smallDesktop {
+    .form {
+        width: 100%;
+
+        .form_select {
+            border-bottom: none;
+        }
+
+        .form_value {
+            padding: 1.6rem 0;
+        }
+
+        .form_options {
+            .form_value {
+                @include transition(color, $time1);
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

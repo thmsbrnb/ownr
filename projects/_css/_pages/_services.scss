@@ -1,0 +1,236 @@
+.section {
+    &.is-services {
+        .section_container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .section_content {
+            position: relative;
+
+            &--1 {
+                height: 65vh;
+            }
+
+            &--2 {
+                grid-row: 1;
+                height: auto;
+            }
+        }
+
+        .services_img--1,
+        .services_img--2,
+        .services_badge--1,
+        .services_badge--2 {
+            border-radius: $radius;
+            object-fit: cover;
+        }
+
+        .services_img {
+            @include transition(transform, $time2);
+        }
+
+        .services_img--1 {
+            width: 75%;
+            height: 80%;
+
+            &:hover {
+                transform: translate(0.4rem, 0.6rem);
+            }
+        }
+
+        .services_img--2 {
+            position: absolute;
+            bottom: 0;
+            right: 0rem;
+            width: 45%;
+            aspect-ratio: 3 / 4;
+            border: 0.4rem solid $grey;
+
+            &:hover {
+                transform: translate(-0.2rem, -0.6rem);
+            }
+        }
+
+        .services_badge {
+            padding: 1.4rem 1.8rem;
+            position: absolute;
+            background: rgba($white, 0.35);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 0.6rem 0.6rem 0 rgba($black, 0.05);
+            @include transition(transform, $time2);
+
+            &:hover {
+                transform: translateY(-0.6rem);
+            }
+
+            .badge_title,
+            .badge_link {
+                text-transform: capitalize;
+            }
+
+            .badge_title {
+                font-size: 1.6rem;
+                @include font-semi-bold;
+            }
+
+            .badge_subtitle {
+                margin-bottom: 1.8rem;
+                display: flex;
+                align-items: center;
+                font-size: 1.4rem;
+                @include font-light;
+
+                .icon_location_2 {
+                    margin-left: -0.2rem;
+                    margin-right: 0.6rem;
+
+                    &:before {
+                        background: url("../../../assets/icons/icon_location_2.svg")
+                            no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .badge_link {
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+                color: $primary;
+                @include font-medium;
+            }
+
+            .icon_arrow_right {
+                margin-left: 0.2rem;
+
+                &:before {
+                    width: 1.6rem;
+                    background: url("../../../assets/icons/icon_arrow_right.svg")
+                        no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            &--1 {
+                top: 4rem;
+                right: 0;
+                align-items: center;
+
+                .badge_title {
+                    margin-bottom: 0.4rem;
+                }
+
+                .icon_play {
+                    $size: 4rem;
+
+                    cursor: pointer;
+                    margin-right: 1.4rem;
+                    width: $size;
+                    height: $size;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    background: $primary;
+
+                    &:before {
+                        width: 2.6rem;
+                        background: url("../../../assets/icons/icon_play.svg")
+                            no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            &--2 {
+                bottom: 6rem;
+                left: 2rem;
+
+                .badge_title {
+                    margin-bottom: 0.48em;
+                }
+            }
+        }
+
+        .services_card {
+            margin-bottom: 2.4rem;
+            text-align: center;
+
+            .card_title {
+                margin-bottom: 0.4rem;
+                font-size: 3.2rem;
+                color: $primary;
+                @include font-semi-bold;
+            }
+        }
+
+        .btn {
+            margin: 4rem 0 8rem;
+            width: 100%;
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// > 720px
+@include largeTablet {
+    .section {
+        &.is-services {
+            .section_container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 1fr;
+            }
+
+            .section_content {
+                height: 80vh;
+
+                &--1 {
+                    grid-row: 1;
+                }
+
+                &--2 {
+                    padding-top: 0;
+                    padding-left: 6rem;
+                }
+            }
+
+            .section_title,
+            .section_subtitle {
+                text-align: left;
+            }
+
+            .services_badge {
+                &--1 {
+                    right: 2rem;
+
+                    .icon_play {
+                        @include transition(all, $time1);
+
+                        &:hover {
+                            background: darken($white, 50);
+                        }
+                    }
+                }
+
+                &--2 {
+                    bottom: 8rem;
+                    left: 10rem;
+                }
+            }
+
+            .services_card {
+                text-align: left;
+
+                .card_title {
+                    font-size: 4rem;
+                }
+            }
+
+            .btn {
+                margin: 3rem 0;
+                width: auto;
+            }
+        }
+    }
+}

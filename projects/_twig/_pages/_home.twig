@@ -1,0 +1,19 @@
+{% set section = {
+    "value": "home",
+    "behaviour": "container"
+} %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container{{ section.behaviour ? " " ~ section.behaviour : "" }}">
+        <h1 class="section_title">
+            Find your<br>
+            dream house<br>
+            <span class="emph">only with&nbsp;</span>ownr
+        </h1>
+        <p class="section_subtitle">
+            We help you find the perfect home for you and your loved ones with our 
+            wide selection of properties and market-leading services.
+        </p>
+        {% include "../_modules/_search.twig" %}
+    </div>
+</section>

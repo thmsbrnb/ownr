@@ -1,0 +1,25 @@
+.main {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+.icon {
+    &:before {
+        content: "";
+        display: block;
+        width: 2rem;
+        aspect-ratio: 1;
+    }
+}

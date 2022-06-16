@@ -1,0 +1,72 @@
+.header {
+    z-index: 100;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: $headerHeightMobile;
+    background: $grey;
+    @include transition(all, $time2);
+
+    &.is-active {
+        background: $white;
+        box-shadow: 0 0.6rem 0.6rem 0 rgba($black, 0.05);
+    }
+
+    .header_container {
+        padding: 0 1.6rem;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo {
+        width: 8.2rem;
+    }
+
+    .btn {
+        display: none;
+    }
+}
+
+// ---------- Responsive ----------
+// < 360px
+@include smallMobile {
+    .header {
+        .header_container {
+            padding: 0 0.8rem;
+        }
+    }
+}
+
+// > 720px
+@include largeTablet {
+    .header {
+        max-width: calc(1280px + 2.4rem);
+        height: $headerHeight;
+        background: transparent;
+
+        &.is-active {
+            height: #{$headerHeight - 4rem};
+        }
+
+        .header_container {
+            padding: 0 2.4rem;
+        }
+
+        .btn {
+            display: block;
+        }
+    }
+}
+
+// > 1280px
+@include largeDesktop {
+    .header {
+        .header_container {
+            padding: 0 5.2rem;
+        }
+    }
+}

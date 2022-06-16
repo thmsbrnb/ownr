@@ -1,0 +1,16 @@
+$black: #061f48;
+$grey: #f6f6f6;
+$white: #ffffff;
+
+$primary: #3a5cee;
+$primaryDark: #061f48;
+
+body {
+    color: $black;
+    background: $grey;
+}
+
+a,
+button {
+    color: inherit;
+}

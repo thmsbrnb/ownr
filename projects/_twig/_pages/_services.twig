@@ -1,0 +1,66 @@
+{% set section = {
+    "value": "services",
+    "behaviour": "container grid"
+} %}
+
+{% set card_items = [
+    {
+        "title" : "10K+",
+        "subtitle" : "Happy customers with our services"
+    },
+    {
+        "title" : "3,8K+",
+        "subtitle" : "Sales contracts signed last year"
+    },
+    {
+        "title" : "400+",
+        "subtitle" : "Partner agencies around the country"
+    }
+] %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container{{ section.behaviour ? " " ~ section.behaviour : "" }}">
+        <div class="section_content section_content--1">
+            <img src="../../assets/img/services_1.png" alt="Apartment view from outside" class="services_img services_img--1">
+            <img src="../../assets/img/services_2.png" alt="Apartment view from inside" class="services_img services_img--2">
+            <div class="services_badge services_badge--1 flex">
+                <span class="icon icon_play"></span>
+                <div>
+                    <div class="badge_title">view house tour</div>
+                    <a href="#!" class="badge_link">
+                        watch video
+                        <span class="icon icon_arrow_right"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="services_badge services_badge--2">
+                <div>
+                    <div class="badge_title">
+                        luxury minimal house
+                    </div>
+                    <div class="badge_subtitle">
+                        <span class="icon icon_location_2"></span>
+                        Santa Monica, CA
+                    </div>
+                    <a href="#!" class="badge_link">
+                        view details
+                        <span class="icon icon_arrow_right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section_content section_content--2">
+            <h2 class="section_title">help you find your dream home</h2>
+            <h3 class="section_subtitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eius, harum excepturi labore molestiae sunt debitis maiores! Ullam non deserunt est assumenda!
+            </h3>
+            {% for item in card_items %}
+                <div class="services_card">
+                    <div class="card_title">{{ item.title }}</div>
+                    <div class="card_subtitle">{{ item.subtitle }}</div>
+                </div>
+            {% endfor %}
+            <button class="btn btn--primary">see more</button>
+        </div>
+    </div>
+</section>

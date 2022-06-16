@@ -1,0 +1,114 @@
+{% set form_items = [
+    {
+        "label" : "Location",
+        "select" : "Santa Monica, CA",
+        "icon" : "icon_location",
+        "options" : [
+            {
+                "value": "Burbank, CA"
+            },
+            {
+                "value": "Anaheim, CA"
+            },
+            {
+                "value": "Calabasas, CA"
+            },
+            {
+                "value": "Downtown, CA"
+            },
+            {
+                "value": "Long Beach, CA"
+            },
+            {
+                "value": "Torrance, CA"
+            },
+            {
+                "value": "La Brea, CA"
+            }
+        ]
+    },
+    {
+        "label" : "Type",
+        "select" : "Minimalist",
+        "icon" : "icon_house_2",
+        "options" : [
+            {
+                "value": "Ancient"
+            },
+            {
+                "value": "Wooden"
+            },
+            {
+                "value": "Atypical"
+            }
+        ]
+    },
+    {
+        "label" : "Price",
+        "select" : "$200.000 - $300.000",
+        "icon" : "icon_budget",
+        "options" : [
+            {
+                "value": "$300.000 - $400.000"
+            },
+            {
+                "value": "$400.000 - $500.000"
+            },
+            {
+                "value": "$500.000 - $600.000"
+            },
+            {
+                "value": "$600.000 - $700.000"
+            },
+            {
+                "value": "$700.000 - $800.000"
+            },
+            {
+                "value": "$800.000 - $900.000"
+            },
+            {
+                "value": "$900.000 - $1.000.000"
+            },
+            {
+                "value": "$1.000.000 +"
+            }
+        ]
+    }
+] %}
+
+<div class="search">
+    <div class="search_container flex">
+        <div class="search_pagination">
+            <div class="search_page search_page--1">
+                <span class="icon icon_house"></span>
+                House
+            </div>
+            <div class="search_page search_page--2">
+                <span class="icon icon_apartment"></span>
+                Apartment
+            </div>
+        </div>
+        {% for item in form_items %}
+            <div class="form" id="form">
+                <div class="form_container">
+                    <div class="form_label">{{ item.label }}</div>
+                    <div class="form_select">
+                        <div class="form_value form_trigger">
+                            <div class="flex">
+                                <span class="icon{{ item.icon ? " " ~ item.icon : "" }}"></span>
+                                {{ item.select }}
+                            </div>
+                            <span class="icon icon_arrow_down"></span>
+                        </div>
+                    </div>
+                    <div class="form_options">
+                        {% for option in item.options %}
+                            <div class="form_value form_trigger">{{ option.value }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <button class="btn btn--primary">search</button>
+    </div>
+</div>

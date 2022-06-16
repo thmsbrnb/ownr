@@ -1,0 +1,46 @@
+.btn {
+    padding: 2.4rem 3.2rem;
+    border-radius: 100rem;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    background: transparent;
+    @include font-medium;
+    @include transition(all, $time1);
+
+    &--primary {
+        color: $white;
+        background: $primary;
+
+        &:hover {
+            background: darken($primary, 6);
+        }
+    }
+
+    &--secondary {
+        border: 0.1rem solid $primary;
+        color: $primary;
+        background: transparent;
+
+        &:hover {
+            color: $white;
+            background: $primary;
+        }
+    }
+
+    &--outline {
+        color: $primary;
+
+        &:hover {
+            color: darken($primary, 6);
+            text-decoration: underline;
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// > 720px
+@include largeTablet {
+    .btn {
+        padding: 1.6rem 3.2rem;
+    }
+}

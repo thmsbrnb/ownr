@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OWNR | What you need is a new home</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="build/styles.min.css" media="screen" />
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <main class="layout">
+            <div class="layout_container">
+                <header class="header">
+                    <div class="header_container flex">
+                        <a href="#" class="logo">
+                            <img src="assets/logo.svg" alt="Logo" />
+                        </a>
+                        <nav class="nav" aria-label="main">
+                            <div class="nav_container">
+                                <ul class="list is-nav flex">
+                                    <li class="list_item nav_trigger">
+                                        <a href="#locations" title="Products"
+                                            >Products</a
+                                        >
+                                    </li>
+                                    <li class="list_item nav_trigger">
+                                        <a href="#services" title="Services"
+                                            >Services</a
+                                        >
+                                    </li>
+                                    <li class="list_item nav_trigger">
+                                        <a href="##!" title="About Us"
+                                            >About Us</a
+                                        >
+                                    </li>
+                                    <li class="list_item nav_trigger">
+                                        <a href="#newsletter" title="News"
+                                            >News</a
+                                        >
+                                    </li>
+                                </ul>
+                                <ul class="list is-socials flex">
+                                    <li class="list_item">
+                                        <a
+                                            href="http://www.facebook.com"
+                                            title="Facebook"
+                                            target="_blank"
+                                        >
+                                            <span
+                                                class="icon icon_facebook"
+                                            ></span>
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a
+                                            href="http://www.instagram.com"
+                                            title="Instagram"
+                                            target="_blank"
+                                        >
+                                            <span
+                                                class="icon icon_instagram"
+                                            ></span>
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a
+                                            href="http://www.linkedin.com"
+                                            title="LinkedIn"
+                                            target="_blank"
+                                        >
+                                            <span
+                                                class="icon icon_linkedin"
+                                            ></span>
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a
+                                            href="http://www.youtube.com"
+                                            title="YouTube"
+                                            target="_blank"
+                                        >
+                                            <span
+                                                class="icon icon_youtube"
+                                            ></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <button class="burger nav_trigger" type="button">
+                            <div class="burger_container">
+                                <div class="burger_slice"></div>
+                                <div class="burger_slice"></div>
+                                <div class="burger_slice"></div>
+                            </div>
+                        </button>
+                        <button class="btn btn--outline">sign in</button>
+                        <button class="btn btn--primary">sign up</button>
+                    </div>
+                </header>
+                <section class="section is-home" aria-label="home" id="home">
+                    <div class="section_container container">
+                        <h1 class="section_title">
+                            Find your<br />
+                            dream house<br />
+                            <span class="emph">only with&nbsp;</span>ownr
+                        </h1>
+                        <p class="section_subtitle">
+                            We help you find the perfect home for you and your
+                            loved ones with our wide selection of properties and
+                            market-leading services.
+                        </p>
+                        <div class="search">
+                            <div class="search_container flex">
+                                <div class="search_pagination">
+                                    <div class="search_page search_page--1">
+                                        <span class="icon icon_house"></span>
+                                        House
+                                    </div>
+                                    <div class="search_page search_page--2">
+                                        <span
+                                            class="icon icon_apartment"
+                                        ></span>
+                                        Apartment
+                                    </div>
+                                </div>
+                                <div class="form" id="form">
+                                    <div class="form_container">
+                                        <div class="form_label">Location</div>
+                                        <div class="form_select">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                <div class="flex">
+                                                    <span
+                                                        class="icon icon_location"
+                                                    ></span>
+                                                    Santa Monica, CA
+                                                </div>
+                                                <span
+                                                    class="icon icon_arrow_down"
+                                                ></span>
+                                            </div>
+                                        </div>
+                                        <div class="form_options">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Burbank, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Anaheim, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Calabasas, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Downtown, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Long Beach, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Torrance, CA
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                La Brea, CA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form" id="form">
+                                    <div class="form_container">
+                                        <div class="form_label">Type</div>
+                                        <div class="form_select">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                <div class="flex">
+                                                    <span
+                                                        class="icon icon_house_2"
+                                                    ></span>
+                                                    Minimalist
+                                                </div>
+                                                <span
+                                                    class="icon icon_arrow_down"
+                                                ></span>
+                                            </div>
+                                        </div>
+                                        <div class="form_options">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Ancient
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Wooden
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                Atypical
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form" id="form">
+                                    <div class="form_container">
+                                        <div class="form_label">Price</div>
+                                        <div class="form_select">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                <div class="flex">
+                                                    <span
+                                                        class="icon icon_budget"
+                                                    ></span>
+                                                    $200.000 - $300.000
+                                                </div>
+                                                <span
+                                                    class="icon icon_arrow_down"
+                                                ></span>
+                                            </div>
+                                        </div>
+                                        <div class="form_options">
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $300.000 - $400.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $400.000 - $500.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $500.000 - $600.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $600.000 - $700.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $700.000 - $800.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $800.000 - $900.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $900.000 - $1.000.000
+                                            </div>
+                                            <div
+                                                class="form_value form_trigger"
+                                            >
+                                                $1.000.000 +
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn--primary">search</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="section is-locations"
+                    aria-label="locations"
+                    id="locations"
+                >
+                    <div class="section_container container">
+                        <h2 class="section_title">
+                            most searched<br />locations
+                        </h2>
+                        <h3 class="section_subtitle">
+                            Discover the most popular places,<br />based on our
+                            users' research and their best reviews
+                        </h3>
+                        <div class="section_content grid">
+                            <article class="location">
+                                <div class="location_img">
+                                    <img
+                                        src="assets/img/loc_1.png"
+                                        alt="Montebello, CA"
+                                    />
+                                </div>
+                                <div class="location_value">
+                                    <span class="icon icon_location_2"></span>
+                                    Montebello, CA
+                                </div>
+                                <div
+                                    class="location_data location_data--catalog"
+                                >
+                                    14+<span class="light"
+                                        >&nbsp;Properties</span
+                                    >
+                                </div>
+                                <div class="location_data location_data--rank">
+                                    <span class="icon icon_rank"></span>
+                                    4,4<span class="light"
+                                        >&nbsp;(1,214 reviews)</span
+                                    >
+                                </div>
+                            </article>
+                            <article class="location">
+                                <div class="location_img">
+                                    <img
+                                        src="assets/img/loc_2.png"
+                                        alt="Naples, CA"
+                                    />
+                                </div>
+                                <div class="location_value">
+                                    <span class="icon icon_location_2"></span>
+                                    Naples, CA
+                                </div>
+                                <div
+                                    class="location_data location_data--catalog"
+                                >
+                                    9+<span class="light"
+                                        >&nbsp;Properties</span
+                                    >
+                                </div>
+                                <div class="location_data location_data--rank">
+                                    <span class="icon icon_rank"></span>
+                                    4,8<span class="light"
+                                        >&nbsp;(1,455 reviews)</span
+                                    >
+                                </div>
+                            </article>
+                            <article class="location">
+                                <div class="location_img">
+                                    <img
+                                        src="assets/img/loc_3.png"
+                                        alt="Los Angeles, CA"
+                                    />
+                                </div>
+                                <div class="location_value">
+                                    <span class="icon icon_location_2"></span>
+                                    Los Angeles, CA
+                                </div>
+                                <div
+                                    class="location_data location_data--catalog"
+                                >
+                                    21+<span class="light"
+                                        >&nbsp;Properties</span
+                                    >
+                                </div>
+                                <div class="location_data location_data--rank">
+                                    <span class="icon icon_rank"></span>
+                                    4,5<span class="light"
+                                        >&nbsp;(787 reviews)</span
+                                    >
+                                </div>
+                            </article>
+                        </div>
+                        <button class="btn btn--secondary">view all</button>
+                    </div>
+                </section>
+                <section
+                    class="section is-services"
+                    aria-label="services"
+                    id="services"
+                >
+                    <div class="section_container container grid">
+                        <div class="section_content section_content--1">
+                            <img
+                                src="assets/img/services_1.png"
+                                alt="Apartment view from outside"
+                                class="services_img services_img--1"
+                            />
+                            <img
+                                src="assets/img/services_2.png"
+                                alt="Apartment view from inside"
+                                class="services_img services_img--2"
+                            />
+                            <div class="services_badge services_badge--1 flex">
+                                <span class="icon icon_play"></span>
+                                <div>
+                                    <div class="badge_title">
+                                        view house tour
+                                    </div>
+                                    <a href="#!" class="badge_link">
+                                        watch video
+                                        <span
+                                            class="icon icon_arrow_right"
+                                        ></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="services_badge services_badge--2">
+                                <div>
+                                    <div class="badge_title">
+                                        luxury minimal house
+                                    </div>
+                                    <div class="badge_subtitle">
+                                        <span
+                                            class="icon icon_location_2"
+                                        ></span>
+                                        Santa Monica, CA
+                                    </div>
+                                    <a href="#!" class="badge_link">
+                                        view details
+                                        <span
+                                            class="icon icon_arrow_right"
+                                        ></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section_content section_content--2">
+                            <h2 class="section_title">
+                                help you find your dream home
+                            </h2>
+                            <h3 class="section_subtitle">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Tenetur eius, harum excepturi
+                                labore molestiae sunt debitis maiores! Ullam non
+                                deserunt est assumenda!
+                            </h3>
+                            <div class="services_card">
+                                <div class="card_title">10K+</div>
+                                <div class="card_subtitle">
+                                    Happy customers with our services
+                                </div>
+                            </div>
+                            <div class="services_card">
+                                <div class="card_title">3,8K+</div>
+                                <div class="card_subtitle">
+                                    Sales contracts signed last year
+                                </div>
+                            </div>
+                            <div class="services_card">
+                                <div class="card_title">400+</div>
+                                <div class="card_subtitle">
+                                    Partner agencies around the country
+                                </div>
+                            </div>
+                            <button class="btn btn--primary">see more</button>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="section is-popular container"
+                    aria-label="popular"
+                    id="popular"
+                >
+                    <div class="section_container">
+                        <h2 class="section_title">
+                            Popular<br />properties deals ⭐️
+                        </h2>
+                        <div class="swiper container">
+                            <div class="swiper-wrapper flex">
+                                <article class="card swiper-slide">
+                                    <img
+                                        src="assets/img/popular_1.png"
+                                        alt="Popular property"
+                                        class="card_img"
+                                    />
+                                    <div class="card_price">$393.000</div>
+                                    <div class="card_title">Atypical Flat</div>
+                                    <div class="card_data">
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_location_3"
+                                            ></span>
+                                            Lakewood, CA
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_sqft"></span>
+                                            219 SQFT
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_car"></span>
+                                            Parking
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_people"
+                                            ></span>
+                                            2 bedrooms
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="card swiper-slide">
+                                    <img
+                                        src="assets/img/popular_2.png"
+                                        alt="Popular property"
+                                        class="card_img"
+                                    />
+                                    <div class="card_price">$1.115.000</div>
+                                    <div class="card_title">Modern House</div>
+                                    <div class="card_data">
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_location_3"
+                                            ></span>
+                                            Naples, CA
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_sqft"></span>
+                                            475 SQFT
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_car"></span>
+                                            Parking
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_people"
+                                            ></span>
+                                            3 bedrooms
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="card swiper-slide">
+                                    <img
+                                        src="assets/img/popular_3.png"
+                                        alt="Popular property"
+                                        class="card_img"
+                                    />
+                                    <div class="card_price">$1.322.500</div>
+                                    <div class="card_title">Ancient House</div>
+                                    <div class="card_data">
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_location_3"
+                                            ></span>
+                                            Naples, CA
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_sqft"></span>
+                                            512 SQFT
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_car"></span>
+                                            Parking
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_people"
+                                            ></span>
+                                            4 bedrooms
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="card swiper-slide">
+                                    <img
+                                        src="assets/img/popular_4.png"
+                                        alt="Popular property"
+                                        class="card_img"
+                                    />
+                                    <div class="card_price">$975.500</div>
+                                    <div class="card_title">
+                                        Minimalist Apartment
+                                    </div>
+                                    <div class="card_data">
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_location_3"
+                                            ></span>
+                                            El Segundo, CA
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_sqft"></span>
+                                            402 SQFT
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span class="icon icon_car"></span>
+                                            Parking
+                                        </div>
+                                        <div class="card_dataGroup">
+                                            <span
+                                                class="icon icon_people"
+                                            ></span>
+                                            3 bedrooms
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                <section
+                    class="section is-newsletter"
+                    aria-label="newsletter"
+                    id="newsletter"
+                >
+                    <div class="section_container container">
+                        <h1 class="section_title">
+                            Subscribe to our<br />newsletter
+                        </h1>
+                        <form action="post" class="form">
+                            <input
+                                type="text"
+                                class="form_input"
+                                placeholder="your@email.com"
+                            />
+                            <button class="btn btn--primary form_btn">
+                                subscribe
+                            </button>
+                        </form>
+                    </div>
+                </section>
+                <footer class="footer">
+                    <div class="footer_container container grid">
+                        <div class="footer_content footer_content--1">
+                            <div class="logo">
+                                <img src="assets/logo.svg" />
+                            </div>
+                            <p class="footer_subtitle">
+                                We help you find the perfect home for you and
+                                your loved ones with our wide selection of
+                                properties and market-leading services.
+                            </p>
+                        </div>
+                        <div class="footer_content footer_content--2 flex">
+                            <ul class="list is-support">
+                                <li class="list_itemTitle">support</li>
+                                <li class="list_item">
+                                    <a href="#locations">product</a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#services">services</a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="">contact</a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="">about</a>
+                                </li>
+                            </ul>
+                            <ul class="list is-legal">
+                                <li class="list_itemTitle">legal</li>
+                                <li class="list_item">
+                                    <a href="#!">privacy policy</a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#!">terms of service</a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#!">copyright</a>
+                                </li>
+                            </ul>
+                            <ul class="list is-socials">
+                                <li class="list_itemTitle">social medias</li>
+                                <li class="list_item">
+                                    <a
+                                        href="http://www.facebook.com"
+                                        target="_blank"
+                                        >facebook</a
+                                    >
+                                </li>
+                                <li class="list_item">
+                                    <a
+                                        href="http://www.instagram.com"
+                                        target="_blank"
+                                        >instagram</a
+                                    >
+                                </li>
+                                <li class="list_item">
+                                    <a
+                                        href="http://www.linkedin.com"
+                                        target="_blank"
+                                        >linkedin</a
+                                    >
+                                </li>
+                                <li class="list_item">
+                                    <a
+                                        href="http://www.youtube.com"
+                                        target="_blank"
+                                        >youtube</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </body>
+</html>

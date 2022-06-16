@@ -1,0 +1,14 @@
+{% set section = {
+    "value": "newsletter",
+    "behaviour": "container"
+} %}
+
+<section class="section{{ section.value ? " is-" ~ section.value : "" }}" aria-label="{{ section.value ? section.value : "" }}" id="{{ section.value ? section.value : "" }}">
+    <div class="section_container{{ section.behaviour ? " " ~ section.behaviour : "" }}">
+        <h1 class="section_title">Subscribe to our<br>newsletter</h1>
+        <form action="post" class="form">
+            <input type="text" class="form_input" placeholder="your@email.com">
+            <button class="btn btn--primary form_btn">subscribe</button>
+        </form>
+    </div>
+</section>

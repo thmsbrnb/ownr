@@ -1,0 +1,17 @@
+{% extends '../_base.twig' %}
+
+{% set meta_title = 'What you need is a new home' %}
+
+{% block body %}
+    <main class="layout">
+        <div class="layout_container">
+            {% include "_modules/_header.twig" %}
+            {% include "_pages/_home.twig" %}
+            {% include "_pages/_locations.twig" %}
+            {% include "_pages/_services.twig" %}
+            {% include "_pages/_popular.twig" %}
+            {% include "_pages/_newsletter.twig" %}
+            {% include "_modules/_footer.twig" %}
+        </div>
+    </main>
+{% endblock body %}

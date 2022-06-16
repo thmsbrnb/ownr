@@ -1,0 +1,79 @@
+.section {
+    &.is-newsletter {
+        min-height: auto;
+
+        .section_container {
+            padding: 5.6rem 1.6rem;
+            text-align: center;
+            color: $white;
+            background: linear-gradient(
+                to right,
+                lighten($black, 4),
+                darken($black, 4)
+            );
+        }
+
+        .section_title {
+            margin-bottom: 4rem;
+        }
+
+        .form {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            width: min(100%, 44rem);
+            border-radius: 4rem;
+            background: rgba($white, 0.1);
+        }
+
+        .form_input {
+            border: 0;
+            outline: none;
+            padding: 0 2.4rem;
+            width: 100%;
+            height: calc(6.45rem + 0.8rem);
+            font-size: 1.4rem;
+            color: $white;
+            background: transparent;
+            @include font-light;
+        }
+
+        .form_input::placeholder {
+            font-size: 1.4rem;
+            color: rgba($white, 0.3);
+        }
+
+        .form_btn {
+            position: absolute;
+            top: 0.4rem;
+            right: 0.4rem;
+        }
+    }
+}
+
+// ---------- Responsive ----------
+// > 720px
+@include largeTablet {
+    .section {
+        &.is-newsletter {
+            .section_container {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+                height: auto;
+                border-radius: $radius;
+            }
+
+            .section_title {
+                margin-bottom: 5.6rem;
+            }
+
+            .form {
+                flex-direction: row;
+            }
+
+            .form_input {
+                height: calc(4.55rem + 0.7rem);
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{% set app_name = 'OWNR' %}
+{% set app_title = (meta_title ? app_name ~ ' | ' ~ meta_title : '') %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>{{ app_title }}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+		{% block styles %}
+			<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="../../build/styles.min.css" media="screen"/>
+		{% endblock styles %}
+
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../../projects/_js/_header.js"></script>
+		<script src="../../projects/_js/_nav.js"></script>
+		<script src="../../projects/_js/_form.js"></script>
+		<script src="../../projects/_js/_swiper.js"></script>
+
+	</head>
+
+	<body {{ body_classes ? 'class="' ~ body_classes ~ '"' }}>
+		{% block body '' %}
+		{% block extra_javascripts '' %}
+	</body>
+
+</html>
