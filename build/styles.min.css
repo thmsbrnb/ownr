@@ -590,6 +590,10 @@ body {
     .section.is-newsletter .form_input {
         height: 5.25rem;
     }
+    .section.is-newsletter .form_btn {
+        top: 0.2rem;
+        right: 0.2rem;
+    }
 }
 .header {
     z-index: 100;
