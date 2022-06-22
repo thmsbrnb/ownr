@@ -110,7 +110,7 @@ body {
 }
 @media screen and (min-width: 720px) {
     .section.is-home .section_container {
-        padding-top: 0;
+        padding-top: 20rem;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -123,6 +123,11 @@ body {
     .section.is-home .section_subtitle {
         width: 50%;
         font-size: 1.6rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    .section.is-home .section_container {
+        padding-top: 0;
     }
 }
 .section.is-locations {
@@ -139,7 +144,7 @@ body {
     gap: 3.2rem;
 }
 .section.is-locations .location,
-.section.is-locations .location_img {
+.section.is-locations .location_img img {
     border-radius: 0.8rem;
 }
 .section.is-locations .location {
